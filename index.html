@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIDDLE WEBAPPLICATION</title>
+</head>
+<body>
+
+    
+    <form>
+        <fieldset>
+            <legend>RIDDLE OF THE DAY</legend>
+            <h2 >What has to be broken before you can use it?</h2>
+            <input type="text" placeholder="Your answer" id="answer">
+
+            <details>
+                <summary>HINT:</summary>
+                PROTEIN RICH FOOD
+            </details>
+            <button onclick="check()">SUBMIT</button>
+            <h2 id="result"></h2>
+
+        </fieldset>
+    </form>
+    
+    <style>
+        body{
+            background-color: darksalmon;
+            max-width: 500px;
+             margin: auto;
+            padding: 10px;
+            padding-top: 150px;
+            background-image: url(c:\Users\ADMIN\Downloads\IMG_0825.JPG);
+            
+
+        }
+        button{
+            display: flex;
+             border: 1px solid black;
+             margin: auto;
+            padding: 7px;
+            
+  
+        }
+        fieldset{
+            border-radius: 7px;
+            border: 3px solid black;
+            width: 500px;
+            height: 200px;
+            
+        }
+        input{
+            display: flex;
+            border: 1px solid black;
+             margin: auto;
+            padding: 7px;
+        }
+    </style>
+    <script>
+        const answer=document.getElementById('answer')//get the element with the help of id
+        const result=document.getElementById('result')
+        function check(){
+            console.log(answer.value)
+            if(answer.value=='egg'){
+                result.innerHTML='<b style="color:green">AWW!!CORRECT ANSWER</b>';
+            }
+            else{
+                result.innerHTML='<b style="color:red">OOPS WRONG ANSWER</b>';
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
